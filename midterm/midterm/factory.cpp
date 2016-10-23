@@ -1,5 +1,3 @@
-//polymolphism
-
 #include <iostream>
 #include <string>
 
