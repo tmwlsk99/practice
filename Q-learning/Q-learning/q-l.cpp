@@ -75,7 +75,6 @@ public:
 			{
 				CellData &cell = getCell(i, j);
 
-			
 				printSigned(cell.q_[2]);
 				printf("  ");
 			}
@@ -84,7 +83,7 @@ public:
 			{
 				CellData &cell = getCell(i, j);
 
-				
+		
 				printSigned(cell.q_[3]);
 				printf("   ");
 				
