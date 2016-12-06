@@ -8,7 +8,7 @@
 class CellData
 {
 public:
-	double q_[4] = { 0.0,0.0,0.0,0.0 };
+	double q_[4] = { 0.0,0.0,0.0,0.0 }; //»óÇÏÁÂ¿ì
 	double reward_ = 0.0;
 
 	CellData()
@@ -78,28 +78,28 @@ public:
 				printSigned(cell.q_[2]);
 				printf("  ");
 			}
-	
+
 			for (int i = 0; i < i_res_; i++)
 			{
 				CellData &cell = getCell(i, j);
 
-		
+
 				printSigned(cell.q_[3]);
 				printf("   ");
-				
+
 			}
 			printf("\n");
-				for (int i = 0; i < i_res_; i++)
-				{
-					CellData &cell = getCell(i, j);
+			for (int i = 0; i < i_res_; i++)
+			{
+				CellData &cell = getCell(i, j);
 
-					printf("   ");
-					printSigned(cell.q_[1]);
-					printf("   "); //down
-					printf("   ");
-				}
-				printf("\n\n");
-			
+				printf("   ");
+				printSigned(cell.q_[1]);
+				printf("   "); //down
+				printf("   ");
+			}
+			printf("\n\n");
+
 		}
 	}
 };
@@ -111,7 +111,7 @@ public:
 	double reward_;
 
 	Agent()
-		:i_(0),j_(0),reward_(0.0)
+		:i_(0), j_(0), reward_(0.0)
 	{}
 };
 
@@ -129,7 +129,7 @@ int main()
 
 	world.print();
 
-	for (int t = 0; t < 1000; t++)
+	for (int t = 0; t < 100; t++)
 	{
 		const int action = rand() % 4;
 
@@ -154,20 +154,23 @@ int main()
 
 		if (world.isInside(i, j) == true) // move if available
 		{
-			//move agent start (i,j)
 			
-			//update reward(r_t)
 
-			//update q values of previous cell (q_t)
+ 
+							 //move agent start (i,j)
 
-			//reset if agent is in final cells
+							 //update reward(r_t)
+
+							 //update q values of previous cell (q_t)
+
+							 //reset if agent is in final cells
 		}
 		else
 		{
 			//you may give negative reward to agent
 		}
 
-	/*	std::cout << "Agent status " << my_agent.i_ << " " << my_agent.j_ << std::endl;
+		/*std::cout << "Agent status " << my_agent.i_ << " " << my_agent.j_ << std::endl;
 		std::cout << "action" << action << std::endl;
 
 		world.print();*/
